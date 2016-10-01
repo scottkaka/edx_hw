@@ -1,5 +1,5 @@
 from ps4a import *
-
+from ps4b import *
 
 
 # x={'a':1, 'x':2, 'l':3, 'e':1}
@@ -12,4 +12,9 @@ from ps4a import *
 # print(calculateHandlen(hand))
 
 wordList = loadWords()
-playGame(wordList)
+# playGame(wordList)
+n=5
+hand = dealHand(n)
+playHand(hand, wordList,n)
+print (hand)
+

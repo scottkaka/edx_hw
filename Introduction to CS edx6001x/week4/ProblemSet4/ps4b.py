@@ -124,8 +124,57 @@ def playGame(wordList):
 
     wordList: list (string)
     """
-    # TO DO... <-- Remove this comment when you code this function
-    print("playGame not yet implemented.") # <-- Remove this when you code this function
+    n = HAND_SIZE
+    hand = {}
+    while True:
+        command = input('Enter n to deal a new hand, r to replay the last hand, or e to end game:')
+        if command == 'n':
+            newhand = dealHand(n)
+            hand = newhand
+            print()
+            while True:
+                player = input('Enter u to have yourself play, c to have the computer play:')
+                if player == 'u':
+                    print()
+                    playHand(hand, wordList, n)
+                    print()
+                    break
+                elif player == 'c':
+                    print()
+                    compPlayHand(hand, wordList,n)
+                    print()
+                    break
+                else:
+                    print('Invalid command.')
+                    print()
+        elif command == 'r':
+            print()
+            if len(hand) == 0:
+                print('You have not played a hand yet. Please play a new hand first!')
+                print()
+            else:
+                while True:
+                    player = input('Enter u to have yourself play, c to have the computer play:')
+                    if player == 'u':
+                        print()
+                        playHand(hand, wordList, n)
+                        print()
+                        break
+                    elif player == 'c':
+                        print()
+                        compPlayHand(hand, wordList, n)
+                        print()
+                        break
+                    else:
+                        print('Invalid command.')
+                        print()
+        elif command == 'e':
+            break
+        else:
+            print('Invalid command.')
+
+#
+
 
         
 #
@@ -135,4 +184,5 @@ if __name__ == '__main__':
     wordList = loadWords()
     playGame(wordList)
 
-
+class fastcomp:
+    def convertdic(self, wordList):

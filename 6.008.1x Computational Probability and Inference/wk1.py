@@ -21,7 +21,7 @@ dic[8] = 5/36
 dic[9] = 4/36
 dic[10] = 3/36
 dic[11] = 2/36
-dic[12] = 1/36
+dic[12] = 1 / 36
 
 
 print (dic)
@@ -30,5 +30,4 @@ print (dic.values())
 sum = 0
 for i in dic.values():
     sum += i
-    
 print(sum)

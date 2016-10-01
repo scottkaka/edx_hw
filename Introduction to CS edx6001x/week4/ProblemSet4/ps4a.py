@@ -264,7 +264,8 @@ def playHand(hand, wordList, n):
     if calculateHandlen(hand) == 0:
         print('Run out of letters. Total score: '+ str(score)+' points.')
     else:
-        print('Goodbye! Total score: '+str(score)+' points.')            
+        print('Goodbye! Total score: '+str(score)+' points.')
+        # displayHand(hand)
 
     # Game is over (user entered a '.' or ran out of letters), so tell user the total score
 
@@ -287,7 +288,6 @@ def playGame(wordList):
     """
     n = HAND_SIZE
     hand ={}
-
     while True:
         command = input('Enter n to deal a new hand, r to replay the last hand, or e to end game:')
         if command == 'n':
